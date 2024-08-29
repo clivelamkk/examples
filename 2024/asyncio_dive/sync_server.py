@@ -20,6 +20,7 @@ class Server:
 
     def accept_connections(self) -> None:
         while True:
+            print("Server.accept_connections() ... Waiting")
             conn, addr = self.server_socket.accept()
             with conn:
                 logging.info(f"Connected by {addr}")
